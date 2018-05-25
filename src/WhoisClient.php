@@ -280,13 +280,13 @@ class WhoisClient
             }
 
             // Handler may forget to set rawdata
-            if (!isset($result['rawdata'])) {
+            if (empty($result['rawdata'])) {
                 $result['rawdata'] = $output;
             }
         }
 
         // Type defaults to domain
-        if (!isset($result['regyinfo']['type'])) {
+        if (empty($result['regyinfo']['type'])) {
             $result['regyinfo']['type'] = 'domain';
         }
 
